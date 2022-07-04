@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+    
+    <style>
+      .blind {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                clip: rect(0 0 0 0);
+                overflow: hidden;
+        }
+
+      .px-2 {
+                padding-left: ($spacer * .5) !important;
+                padding-right: ($spacer * .5) !important;
+        }
+
+    </style>
+  <head>
+    <script src="https://kit.fontawesome.com/25b36e3421.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./main.css">
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container column align-items-center ">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+            <header> 
+                <nav id="navbar" class="navbar fixed-top px-3" style="background-color: #343a40;">
+                    <div class="d-flex justify-content-start", class="container-fluid">
+                        <a class="navbar-brand text-white" href="#">Pirogramming</a>
+                            <ul class="nav nav-pills">
+                                <li class="nav-item text-info" style="padding: 8px 40px;">Hanseo Kim</li>
+                                <li class="nav-item text-white" style="padding: 8px 16px;">Intro</li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-secondary" href="#scrollspyHeading1">Highlights</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link text-secondary" href="#scrollspyHeading1">Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link text-secondary" href="#scrollspyHeading1">Contact</a></li>
+                            </ul>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            About
+                                        </button>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content text-center" style="background-color: #343a40;">
+                                                    <div class="modal-header text-white text-center">
+                                                        <span class="modal-title text-center" id="exampleModalLabel">피로그래밍 17기</span>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body text-white text-center">
+                                                        파이팅!<br>
+                                                        모두들 아르샤 하시느라 수고 많으셨습니다!!<br>
+                                                        힘들더라도 끝나면 남는게 많을 겁니다<br>
+                                                        남은 세션들도 힘내서 열심히 해봐요!
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn text-primary" data-bs-dismiss="modal">Download</button>
+                                                        <button type="button" class="btn btn-info" >OK</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </li>
+                        </ul>
+                    </div>    
+                
+                </nav> 
+            </header>
+            <main>
+                <div class="d-inline container">
+                    <div class="column" style="height: 1100px;">
+                      <div class="" style="width: 200px; padding: 400px 100px 0px 0px">
+                        <h1 class="text-center fs-1 fw-bolder" style="width: 1296px; margin: 0 auto;">Pirogramming17</h1>
+                      </div>
+                      <div class="col text-center fw-bolder" style="padding: 20px 0px; border-bottom: 2px solid #343a40;">
+                        <span style="margin-bottom: 20px 0px;">Cheer up</span>
+                      </div>
+                      <div class="col text-center">
+                        <a href="#scrollspyHeading2"><button type="button" class="btn btn-primary" style="margin-top: 10px;">Get Started</button></a>
+                      </div>
+                    </div>
+                </div>
+            </main>
+            <div>
+                <div class="d-inline container">
+                    <div class="column bg-secondary text-white" style="height: 1100px;">
+                      <div class="" style="width: 200px; padding: 400px 100px 0px 0px">
+                        <h1 class="text-center fs-1 fw-bolder text-danger" style="width: 1296px; margin: 0 auto;">Built On the Bootstrap Grid</h1>
+                      </div>
+                      <div class="col text-center fw-bolder" style="padding: 20px 0px; width: 580px; margin: 0 auto;">
+                        <span style="margin-bottom: 20px 0px;">Bootstrap's responsive grid comes in 4sizes or "breakpoints": tiny(xs), small(sm), medium(md) and large(lg). These 4 grid sizes enables you create responsive layouts that behave accordingly on different sizes.</span>
+                      </div>
+                      <div class="col text-center">
+                        <button type="button" class="btn btn-light" style="margin-top: 10px;">Learn More</button>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="d-inline container">
+                    <div class="column" style=" background-color: #343a40;">
+                      <div class="" style="width: 200px;">
+                        <h1 class="text-center fs-2 fw-normal text-primary" style="width: 1296px; margin: 0 auto; padding: 20px 0; border-bottom: 2px solid #9fa0a1;">Flexible Layouts</h1>
+                      </div>
+                      <div>
+                        <div class="row text-white text-center">
+                            <div class="col order-first" style="padding: 20px 0;" >
+                                <img src="./screen.jpeg" style="width: 180px; height: 180px; "></img>
+                                <h2>Responsive</h2>
+                                <span>Your site looks good everywhere</span>
+                            </div>
+                            <div class="col" style="padding: 20px 0;">
+                                <img src="./sass.jpeg" style="width: 180px; height: 180px; "></img>
+                                <h2>Customizable</h2>
+                                <span>Easy to theme and customize with SASS</span>
+                            </div>
+                            <div class="col order-last" style="padding: 20px 0;">
+                                <img src="./star.jpeg" style="width: 180px; height: 180px; "></img>
+                                <h2>consistent</h2>
+                                <span>A mature, well-tested, stable base</span>
+                            </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="story__container d-flex justify-content-around flex-wrap" style="width: 1100px; margin: 0 auto; padding-bottom: 20px;">
+                            <div class="story__content">
+                                <div class="story__img"><img src="https://picsum.photos/seed/picsum1/300/300" alt="" style="padding: 20px;"></div>
+                            </div>
+                            <div class="story__content">
+                                <div class="story__img"><img src="https://picsum.photos/seed/picsum2/300/300" alt="" style="padding: 20px;"></div>
+                            </div>
+                            <div class="story__content">
+                                <div class="story__img"><img src="https://picsum.photos/seed/picsum3/300/300" alt="" style="padding: 20px;"></div>
+                            </div>
+                            <div class="story__content">
+                                <div class="story__img"><img src="https://picsum.photos/seed/picsum4/300/300" alt="" style="padding: 20px;"></div>
+                            </div>
+                            <div class="story__content">
+                                <div class="story__img"><img src="https://picsum.photos/seed/picsum5/300/300" alt="" style="padding: 20px;"></div>
+                            </div>
+                            <div class="story__content">
+                                <div class="story__img"><img src="https://picsum.photos/seed/picsum6/300/300" alt="" style="padding: 20px;"></div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="d-inline container">
+                    <div class="column bg-secondary text-white" style="height: 500px;">
+                      <div class="" style="width: 200px;">
+                        <h1 class="text-center fs-2 fw-bold text-primary" style="width: 1296px; margin: 0 auto; padding: 20px 0; border-bottom: 3px solid #3a3a3a;">Get in Touch</h1>
+                      </div>
+                      <div class="col text-center fw-bolder" style="padding: 20px 0px; width: 580px; margin: 0 auto;">
+                        
+                      </div>
+                      <div class="justify-content-center" style="margin: 0 auto; width: 1200px;">
+                        
+                            <form class="row g-3 justify-content-center">
+                                <div class="col-auto">
+                                    <label for="inputName" class="visually-hidden">Name</label>
+                                    <input type="Name" class="form-control" id="inputName" placeholder="Name">
+                                </div>
+                                <div class="col-auto">
+                                    <label for="inputEmail" class="visually-hidden">Email</label>
+                                    <input type="Email" class="form-control" id="inputEmail" placeholder="Email">
+                                </div>
+                                <div class="col-auto">
+                                    <label for="inputPhone" class="visually-hidden">Phone</label>
+                                    <input type="phone" class="form-control" id="inputPhone" placeholder="Phone">
+                                </div>
+                            </form>
+                        
+                            <div>
+                                <div class="mb-3 d-flex align-items-stretch" style="padding: 30px">
+                                    <label for="exampleFormControlTextarea1" class="form-label"></label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Your message here..</textarea>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="button">Send</button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title text-center" id="exampleModalLabel">Nice job!</h5>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                      You clicked the button, but it doesn't<br>
+                                      actually go anywhere.<br>
+                                      <span class="text-center text-primary" style="padding: 30px 0;">Learn more at Bootstrap</span>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-prymary" data-bs-dismiss="modal">OK</button>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                      </div>    
+                </div>
+            </div>
+            <footer class="container bg-dark">
+                <top class="row align-items-start">
+                        <ul class="col" style="padding: 20px 80px;">
+                            <li class="fs-5 text-primary">Information</li>
+                            <li class="text-white">Product</li>
+                            <li class="text-white">Service</li>
+                            <li class="text-white">Benefits</li>
+                            <li class="text-white">Developer</li>
+                        </ul>
+                        <ul class="col" style="padding: 20px 80px;">
+                            <li class="fs-5 text-primary">About</li>
+                            <li class="text-white">Contact Us</li>
+                            <li class="text-white">Delivery Information</li>
+                            <li class="text-white">Privacy Policy</li>
+                            <li class="text-white">Terms & Conditions</li>
+                        </ul>
+                        <div class="col" style="padding: 20px 80px;">
+                          <span class="fs-5 text-primary">Stay Posted</span>
+                        </div>
+                </top>
+                <bottom style="width: 1296; margin: 0 auto; height: 100px;">
+                    <span class="text-white">Bootstrap © 2022 Programming17</span>
+                </bottom>
+            </footer>
+    </div>
+  </body>
+</html>
