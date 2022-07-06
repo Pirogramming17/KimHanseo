@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pirogramming stopwatch</title>
+  <style>
+    .align {
+        width: 500px; margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="align" style="flex-direction: column; justify-content: center; text-align: center;">
+    <h1>피로그래밍 스톱워치</h1>
+    <h2>
+      <span id="seconds">00</span>:<span id="millis">00</span>
+    </h2>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <button id="reset">reset</button>
+    <div id="recordBase">
+        <input type="checkbox"name="selectAll" onclick="selectAll(this)"
+        />
+
+        <span>구간 기록</span>
+        <button id="delete">delete</button>
+      </div>
+      <div id="recordList"></div>
+  </div>
+  <script>
+    let minutes = 0;
+    let seconds = 0;
+    let millis = 0;
+    const appendTens = document.getElementById("millis");
+    const appendSeconds = document.getElementById("seconds");
+    const buttonStart = document.getElementById("start");
+    const buttonStop = document.getElementById("stop");
+    const buttonReset = document.getElementById("reset");
+    const buttonDelete = document.getElementById("delete");
+    const record = document.getElementById("recordList");
+    const allButton = document.getElementById("checkbox");
+    let intervalId;
+    
+    buttonStart.addEventListener("click", () => {
+    clearInterval(intervalId)
+    intervalId = setInterval(timer, 10)
+    });
+    
+    buttonStop.addEventListener("click", () => {
+    clearInterval(intervalId)
+    });
+    
+    buttonReset.addEventListener("click", () => {
+    clearInterval(intervalId)
+    millis = 0; seconds = 0;
+    appendTens.textContent = "00"
+    appendSeconds.textContent = "00"
+    });
+    
+
+    function timer(){
+    millis++;
+    appendTens.textContent = millis > 9 ? millis : '0' + millis
+    if(millis > 99){
+        seconds++;
+        appendSeconds.textContent = seconds > 9 ? seconds : '0' + seconds
+        millis = 0
+        appendTens.textContent = "00"
+    }
+
+    }
+
+    buttonStop.addEventListener("click", () => {
+        clearInterval(intervalId);
+        const newCheckbox = document.createElement("input");
+        newCheckbox.type = "checkbox";
+        newCheckbox.name = "select";
+        newCheckbox.classList.add("check");
+    
+        const newDiv = document.createElement("div");
+        newDiv.textContent =
+        appendSeconds.textContent +
+        ":" +
+        appendTens.textContent;
+        // newDiv.classList.add('good')
+        newDiv.appendChild(newCheckbox);
+        record.appendChild(newDiv);
+    });
+    
+    buttonDelete.addEventListener("click", () => {
+        var x = document.querySelectorAll(".check");
+        var y = record.childNodes;
+        var count = 0;
+        for (var i = 0; i < x.length; i++) {
+        if (x[i].checked) {
+            y[i - count].remove();
+            count++;
+        }
+        }
+    });
+    
+
+
+    allButton.addEventListener("click", () => {
+        const allcheck = document.querySelectorAll("select");
+        allcheck.forEach((checkbox) => (checkbox.checked = true));
+    });
+  </script>
+</body>
+</html>
