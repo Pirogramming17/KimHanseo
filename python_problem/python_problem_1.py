@@ -57,6 +57,7 @@ while True:
         print('playerB : ', i)
         a.append(i)
         if i == 31:
+            print('playerB win!')
             break
 
     while True:
@@ -85,6 +86,7 @@ while True:
         print('playerA : ', i)
         a.append(i)
         if i == 31:
+            print('playerA win!')
             break
 
     if i == 31:
