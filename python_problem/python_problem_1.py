@@ -1,14 +1,28 @@
 num = 0
 
-print('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) : ')
-num = input()
 
-while num != (1 or 2 or 3):
-    if (str(type(num)) != "<class 'int'>"):
-        print('정수를 입력하세요 >>')
+while True:
+    try:
+        print("부를 숫자의 개수를 입력하세요(1,2,3만 입력 가능) : ")
         num = int(input())
+
+    except ValueError:
+        print("정수를 입력하세요. ")
+
     else:
-        print('1, 2, 3 중 하나를 입력하세요 >>')
-        num = int(input())
+        while True:
+            if num in range(1, 4):
+                break
 
-int(num)
+            else:
+                try:
+                    print("1,2,3 중 하나를 입력하세요.")
+                    num = int(input())
+                except ValueError:
+                    print("정수를 입력하세요. ")
+        break
+    break
+
+
+for i in range(1, num+1):
+    print('playerA : ', i)
