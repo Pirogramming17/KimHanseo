@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리스트 페이지</title>
+</head>
+<body>
+    <div>
+        <h1><a href="{% url 'posts:home' %}">myMoviereviews</a></h1>
+    </div>
+    {% for post in posts %}
+        <article>
+            <h1>
+               <a href="{% url 'posts:detail' post.id %}"> {{post.title}}</a>
+                
+            </h1>
+            <p>
+                개봉년도 : {{post.year}} 
+            </p>
+            
+                장르 : {{post.genre}}
+            </p>
+            <p>
+                별점 : {{post.star}}
+            </p>
+        </article>
+    {% endfor %}
+
+    <a href="/create"><button>리뷰 작성</button></a>
+</body>
+</html>

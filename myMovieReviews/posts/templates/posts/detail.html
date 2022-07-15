@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디테일 페이지</title>
+</head>
+<body>
+    <div>
+        <h1><a href="{% url 'posts:home' %}">myMoviereviews</a></h1>
+    </div>
+    <article>
+        <h2>
+            제목 : {{ post.title }}
+        </h2>
+        <p>
+            기준년도 : {{ post.year }}
+        </p>
+        <P>
+            장르 : {{post.genre}}
+        </P>
+        <p>
+            별점 : {{post.star}}
+        </p>
+        
+		<p>
+            주연배우 : {{post.actor}}
+        </p>
+        <p>
+            감독 : {{post.director}}
+        </p>
+        <p>
+            러닝타임 : {{post.time}} 분
+        </p>
+        <div>
+            리뷰 내용 : {{post.content}}
+        </div>
+    </article>
+
+    <div>
+        <a href="{% url 'posts:update' post.id %}"><button>수정</button></a>
+    </div>
+    <div>
+        <a href="{% url 'posts:delete' post.id %}" method="post"><button>삭제</button></a>
+    </div>
+
+</body>
+</html>
